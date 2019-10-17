@@ -25,4 +25,4 @@ app.use(express.json());
 
 app.use(require('./routes'));
 
-server.listen(4000);
+server.listen(process.env.PORT || 4000);
