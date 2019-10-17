@@ -2,7 +2,4 @@ node_modules
 uploads/*
 
 !uploads/.gitkeep
-!upload/resized
-
-uploads/resized/*
-!uploads/resized/.gitkeep
+!upload/resized/.gitkeep
