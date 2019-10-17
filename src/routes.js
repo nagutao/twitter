@@ -11,9 +11,13 @@ const comentarioControl = require('./controller/comentarioControl');
 routes.get('/tweet', tweetControl.show);
 // visualizar tweets
 routes.post('/tweet', upload.single('imagem'), tweetControl.create);
+//view tweet especifico e comentarios do msm
+routes.get('/tweet/:id', tweetControl.showOne);
+// deletear tweet
+routes.delete('/tweet/:id', tweetControl.delete);
 //like
 routes.post('/tweet/:id/like', likeControl.like);
-//comentario
-routes.post('tweet/:id/comentario', comentarioControl.save);
+//comentar
+routes.post('/tweet/:id/comentario', comentarioControl.save);
 
 module.exports = routes;

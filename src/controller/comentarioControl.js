@@ -8,10 +8,11 @@ class ComentarioControl {
             autor: req.body.autor,
             conteudo: req.body.conteudo
         })
-        Tweet.comentarios.push(newComentario);
+        await Tweet.comentarios.push(newComentario);
         await Tweet.save();
         return res.json(newComentario);
     }
+    
 }
 
 module.exports = new ComentarioControl;
